@@ -1,0 +1,2 @@
+# Inventarios
+Automatización de inventarios
