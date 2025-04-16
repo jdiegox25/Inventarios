@@ -14,7 +14,7 @@
         <aside class="w-64 bg-purple-700 text-white flex flex-col h-full">
             <div class="p-4">
                 <div class="h-16 bg-white rounded-lg flex items-center justify-center">
-                    <img src="imagenes/logo.png" alt="Logo" class="h-12">
+                    <img src="../imagenes/logo.png" alt="Logo" class="h-12">
                 </div>
             </div>
             <nav class="flex-1">
@@ -25,7 +25,6 @@
                             <span class="material-icons mr-2 text-2xl">map</span> Mapas
                             <span class="material-icons ml-auto text-xl">expand_more</span>
                         </button>
-                        <!-- Submenú -->
                         <ul id="submenu-mapas" class="hidden pl-8">
                             <li class="p-2 hover:bg-purple-500">
                                 <a href="#" class="flex items-center text-base font-medium">
@@ -44,10 +43,10 @@
         </aside>
 
         <!-- Contenido principal -->
-        <main class="flex-1 p-6">
+        <main class="flex-1 p-6 overflow-auto">
             <div class="bg-white p-6 rounded-lg shadow-md">
                 <!-- Breadcrumb -->
-                <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center justify-between mb-6">
                     <div class="flex items-center space-x-2 text-gray-600 text-sm">
                         <a href="../vistas/index.html" class="flex items-center space-x-1 hover:text-blue-500">
                             <span class="material-icons">home</span>
@@ -65,11 +64,58 @@
                     </div>
                 </div>
 
-                <!-- Contenido principal -->
+                <!-- Título -->
                 <h1 class="text-2xl font-bold text-gray-800 mb-4">Gestión de Inventarios</h1>
-                <p class="text-gray-600">
-                    Bienvenido al sistema de gestión de inventarios. Aquí puedes administrar tus productos, realizar seguimientos y generar reportes.
+                <p class="text-gray-600 mb-6">
+                    
                 </p>
+
+                <!-- Tarjetas con enlaces -->
+                <div class="space-y-4">
+                    <a href="../vistas/nueva.html" class="block p-4 bg-purple-200 hover:bg-purple-300 rounded-lg shadow transition-all duration-200">
+                        <div class="flex justify-between font-semibold text-lg">
+                            <span>Nuevas EPS</span>
+                            <span>Piso 4</span>
+                        </div>
+                        <div class="flex justify-between text-sm mt-1 text-gray-700">
+                            <span>Última fecha de actualización</span>
+                            <span>12/03/2025</span>
+                        </div>
+                    </a>
+
+                    <a href="../vistas/nueva" class="block p-4 bg-purple-200 hover:bg-purple-300 rounded-lg shadow transition-all duration-200">
+                        <div class="flex justify-between font-semibold text-lg">
+                            <span>Nuevas Médicos</span>
+                            <span>Piso 4</span>
+                        </div>
+                        <div class="flex justify-between text-sm mt-1 text-gray-700">
+                            <span>Última fecha de actualización</span>
+                            <span>12/03/2025</span>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block p-4 bg-purple-200 hover:bg-purple-300 rounded-lg shadow transition-all duration-200">
+                        <div class="flex justify-between font-semibold text-lg">
+                            <span>ITAU</span>
+                            <span>Piso 4</span>
+                        </div>
+                        <div class="flex justify-between text-sm mt-1 text-gray-700">
+                            <span>Última fecha de actualización</span>
+                            <span>12/03/2025</span>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block p-4 bg-purple-200 hover:bg-purple-300 rounded-lg shadow transition-all duration-200">
+                        <div class="flex justify-between font-semibold text-lg">
+                            <span>Bancamía</span>
+                            <span>Piso 4</span>
+                        </div>
+                        <div class="flex justify-between text-sm mt-1 text-gray-700">
+                            <span>Última fecha de actualización</span>
+                            <span>12/03/2025</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </main>
     </div>
