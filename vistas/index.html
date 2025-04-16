@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Inventario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-purple-700 text-white flex flex-col">
+            <div class="p-4">
+                <div class="h-16 bg-white rounded-lg flex items-center justify-center">
+                    <img src="../imagenes/logo.png" alt="Logo" class="h-120">
+                </div>
+            </div>
+            <nav class="flex-1">
+                <ul>
+                    <!-- Mapas con submenú -->
+                    <li class="p-4 hover:bg-purple-600">
+                        <button class="flex items-center w-full text-lg font-semibold" onclick="toggleSubmenu('submenu-mapas')">
+                            <span class="material-icons mr-2 text-2xl">map</span> Mapas
+                            <span class="material-icons ml-auto text-xl">expand_more</span>
+                        </button>
+                        <!-- Submenú -->
+                        <ul id="submenu-mapas" class="hidden pl-8">
+                            <li class="p-2 hover:bg-purple-500">
+                                <a href="#" class="flex items-center text-base font-medium">
+                                    <span class="material-icons mr-2 text-lg">place</span> Ubicación
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-purple-500">
+                                <a href="#" class="flex items-center text-base font-medium">
+                                    <span class="material-icons mr-2 text-lg">inventory</span> Inventario
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <table>
+            <tr>
+              <td class="verde" rowspan="3">
+                ENTRADA<br><span class="flecha">⬆️</span>
+              </td>
+              <td class="amarillo">7WL8MH3J36611<br>JMP0FC3C36843</td>
+              <td class="amarillo">72FGMH3JAF26003<br>JBF0FC3J63831</td>
+              <td class="amarillo">7YB8MH3JAF1850<br>1BF0FC3J53588</td>
+              <td class="amarillo">7vYMH3JAF1830<br>F8F0FC3JAF16673</td>
+              <td class="amarillo">7YLGMH3JAF1815<br>3RF0FC3J63873</td>
+              <td class="vacio">VACÍO</td>
+              <td class="vacio">VACÍO</td>
+              <td class="vacio">VACÍO</td>
+            </tr>
+            <tr>
+              <td class="amarillo">BTNVM032/AFP0772<br>67DFC0F3J6610-F61626</td>
+              <td class="amarillo">JXM0MH3J36661<br>4JXF0FC3JF12845</td>
+              <td class="amarillo">TXMBMH3J35052<br>5DZ0FC3JF81765-36530</td>
+              <td class="amarillo">TXJMH3J36160<br>SC6FC3JHF031-35670</td>
+              <td class="amarillo">TXUMJMH3J35160<br>GDF0FC3JEF1826-36501</td>
+              <td class="amarillo">TYLKMH3J35367<br>GRY2FC3JF18196</td>
+              <td class="amarillo">7Y38MH3JAF1210<br>F3F0FC3J56601</td>
+              <td class="vacio">VACÍO</td>
+            </tr>
+            <tr>
+              <td colspan="8" class="separador">SEPARADOR</td>
+            </tr>
+            <tr>
+              <td colspan="1"></td>
+              <td>172.26.45.12<br>BP0P3661TMA<br>PLANTRONICS</td>
+              <td>172.26.45.18<br>BP0P20303MA<br>PLANTRONICS</td>
+              <td>172.26.45.16<br>BP0P3661MA<br>PLANTRONICS</td>
+              <td>172.26.45.22<br>BP0P12007MA<br>PLANTRONICS</td>
+              <td>172.26.45.11<br>BP0P86103MA<br>PLANTRONICS</td>
+              <td>172.26.45.19<br>BP0P3661OMA<br>PLANTRONICS</td>
+              <td>172.26.45.15<br>BP0P9650MA<br>PLANTRONICS</td>
+              <td>172.26.45.21<br>BP0P9637MA<br>PLANTRONICS</td>
+            </tr>
+          </table>
+
+    <script>
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById(id);
+            submenu.classList.toggle('hidden');
+        }
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+table {
+    border-collapse: collapse;
+    font-family: monospace;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  td {
+    border: 2px solid black;
+    padding: 4px;
+    vertical-align: middle;
+  }
+
+  .amarillo {
+    background-color: #ffff66;
+  }
+
+  .verde {
+    background-color: #009245;
+    color: white;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+
+  .vacio {
+    background-color: #ffffff;
+  }
+
+  .separador {
+    background-color: #ffffff;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+  }
+
+  .flecha {
+    font-size: 24px;
+  }
