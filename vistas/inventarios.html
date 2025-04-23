@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Inventario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-purple-700 text-white flex flex-col h-full">
+            <div class="p-4">
+                <div class="h-16 bg-white rounded-lg flex items-center justify-center">
+                    <img src="../imagenes/logo.png" alt="Logo" class="h-12">
+                </div>
+            </div>
+            <nav class="flex-1">
+                <ul>
+                    <!-- Mapas con submenú -->
+                    <li class="p-4 hover:bg-purple-600">
+                        <button class="flex items-center w-full text-lg font-semibold" onclick="toggleSubmenu('submenu-mapas')">
+                            <span class="material-icons mr-2 text-2xl">map</span> Mapas
+                            <span class="material-icons ml-auto text-xl">expand_more</span>
+                        </button>
+                        <ul id="submenu-mapas" class="hidden pl-8">
+                            <li class="p-2 hover:bg-purple-500">
+                                <a href="#" class="flex items-center text-base font-medium">
+                                    <span class="material-icons mr-2 text-lg">place</span> Ubicación
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-purple-500">
+                                <a href="#" class="flex items-center text-base font-medium">
+                                    <span class="material-icons mr-2 text-lg">inventory</span> Inventario
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="flex-1 p-6 overflow-auto">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <!-- Breadcrumb -->
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center space-x-2 text-gray-600 text-sm">
+                        <a href="../vistas/index.html" class="flex items-center space-x-1 hover:text-blue-500">
+                            <span class="material-icons">home</span>
+                            <span>Inicio</span>
+                        </a>
+                        <span>/</span>
+                        <a href="../vistas/inventarios.html" class="flex items-center space-x-1 hover:text-blue-500">
+                            <span class="material-icons">inventory</span>
+                            <span>Inventarios</span>
+                        </a>
+                    </div>
+                    <!-- Buscador -->
+                    <div class="w-1/4 flex items-center border border-gray-300 rounded-lg focus-within:ring-1 focus-within:ring-blue-500">
+                        <span class="material-icons text-gray-500 px-2">search</span>
+                        <input type="text" placeholder="Buscar en inventarios..." class="w-full py-3 focus:outline-none">
+                    </div>
+                </div>
+
+                <!-- Título -->
+                <h1 class="text-2xl font-bold text-gray-800 mb-4">Gestión de Inventarios</h1>
+                <p class="text-gray-600 mb-6">
+                    
+                </p>
+
+                <!-- Tarjetas con enlaces -->
+                <div class="space-y-4">
+                    <a href="nueva.html" class="block p-4 bg-purple-200 hover:bg-purple-300 rounded-lg shadow transition-all duration-200">
+                        <div class="flex justify-between font-semibold text-lg">
+                            <span>Nuevas EPS</span>
+                            <span>Piso 4</span>
+                        </div>
+                        <div class="flex justify-between text-sm mt-1 text-gray-700">
+                            <span>Última fecha de actualización</span>
+                            <span>12/03/2025</span>
+                        </div>
+                    </a>
+
+                    <a href="nueva_medicos.html" class="block p-4 bg-purple-200 hover:bg-purple-300 rounded-lg shadow transition-all duration-200">
+                        <div class="flex justify-between font-semibold text-lg">
+                            <span>Nuevas Médicos</span>
+                            <span>Piso 4</span>
+                        </div>
+                        <div class="flex justify-between text-sm mt-1 text-gray-700">
+                            <span>Última fecha de actualización</span>
+                            <span>12/03/2025</span>
+                        </div>
+                    </a>
+
+                    <a href="Itau.html" class="block p-4 bg-purple-200 hover:bg-purple-300 rounded-lg shadow transition-all duration-200">
+                        <div class="flex justify-between font-semibold text-lg">
+                            <span>ITAU</span>
+                            <span>Piso 4</span>
+                        </div>
+                        <div class="flex justify-between text-sm mt-1 text-gray-700">
+                            <span>Última fecha de actualización</span>
+                            <span>12/03/2025</span>
+                        </div>
+                    </a>
+
+                    <a href="Bancamia.html" class="block p-4 bg-purple-200 hover:bg-purple-300 rounded-lg shadow transition-all duration-200">
+                        <div class="flex justify-between font-semibold text-lg">
+                            <span>Bancamía</span>
+                            <span>Piso 4</span>
+                        </div>
+                        <div class="flex justify-between text-sm mt-1 text-gray-700">
+                            <span>Última fecha de actualización</span>
+                            <span>12/03/2025</span>
+                        </div>
+                    </a>
+                    <a href="Bienestar_ips.html" class="block p-4 bg-purple-200 hover:bg-purple-300 rounded-lg shadow transition-all duration-200">
+                        <div class="flex justify-between font-semibold text-lg">
+                            <span>Bienestar ips</span>
+                            <span>Piso 4</span>
+                        </div>
+                        <div class="flex justify-between text-sm mt-1 text-gray-700">
+                            <span>Última fecha de actualización</span>
+                            <span>12/03/2025</span>
+                        </div>
+                    </a>
+                    <a href="Cafam.html" class="block p-4 bg-purple-200 hover:bg-purple-300 rounded-lg shadow transition-all duration-200">
+                        <div class="flex justify-between font-semibold text-lg">
+                            <span>cafam</span>
+                            <span>Piso 4</span>
+                        </div>
+                        <div class="flex justify-between text-sm mt-1 text-gray-700">
+                            <span>Última fecha de actualización</span>
+                            <span>12/03/2025</span>
+                        </div>
+                    </a>
+                    <a href="Banco_de_Occidente.html" class="block p-4 bg-purple-200 hover:bg-purple-300 rounded-lg shadow transition-all duration-200">
+                        <div class="flex justify-between font-semibold text-lg">
+                            <span>Banco de occidente</span>
+                            <span>Piso 4</span>
+                        </div>
+                        <div class="flex justify-between text-sm mt-1 text-gray-700">
+                            <span>Última fecha de actualización</span>
+                            <span>12/03/2025</span>
+                        </div>
+                    </a>
+                    <a href="ban_100.html" class="block p-4 bg-purple-200 hover:bg-purple-300 rounded-lg shadow transition-all duration-200">
+                        <div class="flex justify-between font-semibold text-lg">
+                            <span>Ban 100</span>
+                            <span>Piso 4</span>
+                        </div>
+                        <div class="flex justify-between text-sm mt-1 text-gray-700">
+                            <span>Última fecha de actualización</span>
+                            <span>12/03/2025</span>
+                        </div>
+                    </a>
+                    <a href="hikvision.html" class="block p-4 bg-purple-200 hover:bg-purple-300 rounded-lg shadow transition-all duration-200">
+                        <div class="flex justify-between font-semibold text-lg">
+                            <span>hikvision</span>
+                            <span>Piso 4</span>
+                        </div>
+                        <div class="flex justify-between text-sm mt-1 text-gray-700">
+                            <span>Última fecha de actualización</span>
+                            <span>12/03/2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById(id);
+            submenu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
+=======
+<html lang="es">
+>>>>>>> main
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +11,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<<<<<<< HEAD
 
     <link rel="stylesheet" href="styles/index.css">
 </head>
@@ -17,6 +22,17 @@
             <div class="p-4">
                 <div class="h-16 bg-white rounded-lg flex items-center justify-center">
                     <img src="../imagenes/logo.png" alt="Logo" class="h-120">
+=======
+</head>
+<body class="bg-white text-gray-900">
+
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-purple-700 text-white flex flex-col h-full">
+            <div class="p-4">
+                <div class="h-16 bg-white rounded-lg flex items-center justify-center">
+                    <img src="../imagenes/logo.png" alt="Logo" class="h-12">
+>>>>>>> main
                 </div>
             </div>
             <nav class="flex-1">
@@ -35,7 +51,11 @@
                                 </a>
                             </li>
                             <li class="p-2 hover:bg-purple-500">
+<<<<<<< HEAD
                                 <a href="#" class="flex items-center text-base font-medium">
+=======
+                                <a href="../vistas/inventarios.html" class="flex items-center text-base font-medium">
+>>>>>>> main
                                     <span class="material-icons mr-2 text-lg">inventory</span> Inventario
                                 </a>
                             </li>
@@ -45,6 +65,7 @@
             </nav>
         </aside>
 
+<<<<<<< HEAD
         <table>
             <tr>
                 <td style="border-left: none; border-top: none;"></td>
@@ -152,11 +173,33 @@
             </tr>
         </table>
 
+=======
+        <!-- Contenedor del video -->
+        <div class="bg-white flex justify-center items-center h-full p-4">
+            <video 
+              id="videoInicio"
+              class="rounded-lg  w-[1000px] h-auto ml-[50px] " 
+              autoplay 
+              muted 
+              loop 
+              playsinline 
+              preload="auto">
+              <source src="../imagenes/Grabación 2025-04-23 080530.mp4" type="video/mp4">
+              <source src="../imagenes/Grabación 2025-04-23 080530.mp4" type="video/ogg">
+              Tu navegador no soporta el formato de video.
+            </video>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+>>>>>>> main
     <script>
         function toggleSubmenu(id) {
             const submenu = document.getElementById(id);
             submenu.classList.toggle('hidden');
         }
+<<<<<<< HEAD
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             sidebar.classList.toggle('hidden');
@@ -164,3 +207,14 @@
     </script>
 </body>
 </html>
+=======
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('videoInicio');
+            video.playbackRate = 0.75; // Controla la velocidad del video
+        });
+    </script>
+
+</body>
+</html>
+>>>>>>> main
