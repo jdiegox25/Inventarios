@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,8 @@
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-white text-gray-900">
+
     <div class="flex h-screen">
         <!-- Sidebar -->
         <aside class="w-64 bg-purple-700 text-white flex flex-col h-full">
@@ -41,19 +42,38 @@
                     </li>
                 </ul>
             </nav>
-           
         </aside>
+
+        <!-- Contenedor del video -->
+        <div class="bg-white flex justify-center items-center h-full p-4">
+            <video 
+              id="videoInicio"
+              class="rounded-lg  w-[1000px] h-auto ml-[50px] " 
+              autoplay 
+              muted 
+              loop 
+              playsinline 
+              preload="auto">
+              <source src="../imagenes/Grabación 2025-04-23 080530.mp4" type="video/mp4">
+              <source src="../imagenes/Grabación 2025-04-23 080530.mp4" type="video/ogg">
+              Tu navegador no soporta el formato de video.
+            </video>
+        </div>
+
     </div>
 
+    <!-- Scripts -->
     <script>
         function toggleSubmenu(id) {
             const submenu = document.getElementById(id);
             submenu.classList.toggle('hidden');
         }
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('hidden');
-        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('videoInicio');
+            video.playbackRate = 0.75; // Controla la velocidad del video
+        });
     </script>
+
 </body>
 </html>

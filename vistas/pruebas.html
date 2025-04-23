@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subir Cambios</title>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/tailwindcss-jit-cdn"></script>
+</head>
+<body class="bg-gray-50 h-screen flex justify-center items-center">
+
+  <!-- Interfaz de carga de cambios -->
+  <div x-data="{ loading: false, progress: 0, success: false, error: false }" class="w-96 p-6 bg-white shadow-lg rounded-lg">
+    <!-- Título -->
+    <h2 class="text-xl font-semibold text-center mb-6">Subir Cambios a tu Rama</h2>
+
+    <!-- Indicador de progreso -->
+    <div class="w-full h-2 bg-gray-200 rounded-full mb-4">
+      <div class="h-full bg-blue-600 rounded-full" :style="`width: ${progress}%`"></div>
+    </div>
+
+    <!-- Mensaje de estado -->
+    <div class="mb-4">
+      <span x-show="loading" class="text-yellow-600">Cargando cambios...</span>
+      <span x-show="success" class="text-green-600">¡Cambios subidos exitosamente!</span>
+      <span x-show="error" class="text-red-600">Hubo un error al subir los cambios.</span>
+    </div>
+
+    <!-- Botón de carga -->
+    <button @click="uploadChanges" 
+            :disabled="loading"
+            class="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition disabled:bg-gray-400">
+      <span x-show="!loading">Subir Cambios</span>
+      <span x-show="loading">Subiendo...</span>
+    </button>
+  </div>
+
+  <script>
+    // Función de carga (simulada)
+    function uploadChanges() {
+      this.loading = true;
+      this.success = false;
+      this.error = false;
+      this.progress = 0;
+
+      let interval = setInterval(() => {
+        this.progress += 10;
+
+        if (this.progress >= 100) {
+          clearInterval(interval);
+          // Simula un 80% de éxito o error
+          if (Math.random() > 0.2) {
+            this.success = true;
+          } else {
+            this.error = true;
+          }
+          this.loading = false;
+        }
+      }, 500);
+    }
+  </script>
+
+</body>
+</html>
